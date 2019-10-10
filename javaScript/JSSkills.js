@@ -71,6 +71,7 @@ $(window).on('resize scroll', function() {
 
     navBar.classList.add("scroll");
     left_div.classList.add("scroll");
+    var sub = document.querySelector(".sub_section .active");
 
     $(".sub_section").each(function() {
         var activeSection = $(this).attr('id');
