@@ -172,10 +172,9 @@ h1{
     margin-left: 2rem;
 }
 
-.sub_section{
-    height: 35rem;
+#skills, #experience{
+    height: 45rem;
 }
-
 
 /* Adjusting elements according to screen size. Responsive */
 

@@ -56,31 +56,29 @@ function animate1() {
 
 animate1();
 
-//when screen reaches end of the sections
 
-$(window).scroll(function(e){
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+  
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+  
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+  
+$(window).on('resize scroll', function() {
+
     navBar.classList.add("scroll");
     left_div.classList.add("scroll");
 
-    if ($window.scrollTop() >= skill_distance && skill_scroll){
-        experienceh.click();
-        string1 = "EXPERIENCE..."
-        orig_text1 = string1.split(""); 
-        next = false;
-        typing_text.innerHTML = "";//clear text on HTML
-        animate1();
-        skill_scroll = false;
-    }
-
-    if ($window.scrollTop() >= exp_distance && experience_scroll){
-        designsh.click();
-        string1 = "DIGITAL DESIGNS..."
-        orig_text1 = string1.split("");
-        next = false;
-        typing_text.innerHTML = "";//clear text on HTML
-        animate1();
-        experience_scroll = false;
-    }
-
-
+    $(".sub_section").each(function() {
+        var activeSection = $(this).attr('id');
+        if ($(this).isInViewport()) {
+            reset_nav_elements();
+            $("#"+activeSection+"_heading").addClass("active");
+        } else{
+            $("#"+activeSection+"_heading").removeClass("active"); 
+        }
+    });
 });
