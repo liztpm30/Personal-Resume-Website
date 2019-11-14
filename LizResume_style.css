@@ -3,6 +3,7 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     width: 100vw;
     background: rgb(230, 231, 235);
+    height: 100%;
 }
 
 p{
@@ -44,11 +45,11 @@ h1{
 }
 
 .icon_hover{
-    color: black;
+    color: #f92672 !important;
 }
 
 .footer .icon{
-    color: white;
+    color:  white;
 }
 
 #button{
@@ -75,6 +76,7 @@ h1{
 #heading_text{
     font-family: 'Nanum Gothic Coding', monospace;
     color: white;
+    text-align: center;
 }
 
 #name{
@@ -172,9 +174,28 @@ h1{
     margin-left: 2rem;
 }
 
-#skills, #experience{
+#skills{
+    height: 35rem;
+}
+
+#experience{
     height: 45rem;
 }
+
+#resume{
+    height: 50rem;
+    text-align: center;
+}
+
+#resume i{
+    font-size: 3rem;
+    color: #f92672;
+}
+
+#resume i:hover{
+    color:  rgb(20, 21, 23);
+}
+
 
 /* Adjusting elements according to screen size. Responsive */
 

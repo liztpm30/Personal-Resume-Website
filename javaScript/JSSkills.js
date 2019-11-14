@@ -6,13 +6,6 @@ var experienceh = document.querySelector("#experience_heading");
 var designsh = document.querySelector("#designs_heading");
 var nav_list = document.querySelectorAll("#mainNavBar a");
 var $window = $(window);
-var skill_distance = $('#skill_list').offset().top + $('#skill_list').outerHeight(true);
-var exp_distance = $('#exp_list').offset().top + $('#exp_list').outerHeight(true);
-var skill_scroll = true;
-var experience_scroll = true;
-
-
-var section_exp = false;
 
 for(var i=0; i<nav_list.length; i++){
     nav_list[i].addEventListener("mouseover", function(){
@@ -36,27 +29,6 @@ for(var i=0; i<nav_list.length; i++){
     }
 }
 
-
-//Typing text animation
-
-var string1 = typing_text.innerHTML
-var orig_text1 = string1.split("");
-var next = false;
-
-typing_text.innerHTML = "";//clear text on HTML
-
-function animate1() {
-    if(orig_text1.length > 0){
-        typing_text.innerHTML += orig_text1.shift()
-    }else{
-        clearTimeout(running);
-    } 
-    var running = setTimeout(animate1, 100);
-};
-
-animate1();
-
-
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -71,13 +43,31 @@ $(window).on('resize scroll', function() {
 
     navBar.classList.add("scroll");
     left_div.classList.add("scroll");
-    var sub = document.querySelector(".sub_section .active");
 
     $(".sub_section").each(function() {
         var activeSection = $(this).attr('id');
         if ($(this).isInViewport()) {
             reset_nav_elements();
             $("#"+activeSection+"_heading").addClass("active");
+
+                //Animated text transition when displayed section changes
+                switch(activeSection){
+                    case "skills":
+                        typing_text.innerHTML = "TECHNICAL SKILLS";
+                        break;
+                    case "experience":
+                        typing_text.innerHTML = "EXPERIENCE";
+                        break;
+                    case "designs":
+                        typing_text.innerHTML = "DIGITAL DESIGNS";
+                        break;
+                    case "resume":
+                            typing_text.innerHTML = "RESUME";
+                            break;
+                    default:
+                        break;
+            }
+
         } else{
             $("#"+activeSection+"_heading").removeClass("active"); 
         }
