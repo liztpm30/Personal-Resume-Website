@@ -43,7 +43,7 @@ for(var i=0; i<icons.length; i++){
 
 //Adding events for the contact section
 typing_text_sec.addEventListener("click", function(){
-    document.querySelector("#contact").classList.remove("hide");
+    typing_text_sec.innerHTML = "Email: lpied013@fiu.edu";
 });
 
 //Typing text animation

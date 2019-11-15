@@ -97,8 +97,14 @@ h1{
 }
 
 #main_text #getInTouch{
-    text-align: end;
+    text-align: start;
     margin-top: 0;
+    font-size: 1rem;
+
+}
+
+#first_text{
+    font-size: 1rem;
 }
 
 .hide{
@@ -107,10 +113,6 @@ h1{
 
 #getInTouch:hover{
     color: #f92672;
-}
-
-.contact{
-    font-size: 1rem;
 }
 
 .footer{
@@ -157,6 +159,14 @@ h1{
     z-index: 100;
 }
 
+.scroll_dot{
+    color: white;
+}
+
+.scroll_dot:hover{
+    color: #f92672;
+}
+
 .skill_right .scroll{
     background-color:  rgb(230, 231, 235);
 } 
@@ -175,7 +185,7 @@ h1{
 }
 
 #skills{
-    height: 35rem;
+    height: 45rem;
 }
 
 #experience{
@@ -195,7 +205,6 @@ h1{
 #resume i:hover{
     color:  rgb(20, 21, 23);
 }
-
 
 /* Adjusting elements according to screen size. Responsive */
 

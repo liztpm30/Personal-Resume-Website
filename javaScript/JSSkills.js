@@ -5,6 +5,7 @@ var skillh = document.querySelector("#skills_heading");
 var experienceh = document.querySelector("#experience_heading");
 var designsh = document.querySelector("#designs_heading");
 var nav_list = document.querySelectorAll("#mainNavBar a");
+var dot_list = document.querySelectorAll(".scroll_dot");
 var $window = $(window);
 
 for(var i=0; i<nav_list.length; i++){
@@ -27,7 +28,15 @@ for(var i=0; i<nav_list.length; i++){
             nav_list[i].classList.remove("active");
         };
     }
+
+    function reset_dots (){
+        for(var i=0; i<dot_list.length; i++){
+            dot_list[i].classList.remove("fas");
+            dot_list[i].classList.add("far");
+        };
+    }
 }
+
 
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
@@ -54,15 +63,23 @@ $(window).on('resize scroll', function() {
                 switch(activeSection){
                     case "skills":
                         typing_text.innerHTML = "TECHNICAL SKILLS";
+                        reset_dots();
+                        dot_list[0].classList.add("fas");
                         break;
                     case "experience":
                         typing_text.innerHTML = "EXPERIENCE";
+                        reset_dots();
+                        dot_list[1].classList.add("fas");
                         break;
                     case "designs":
                         typing_text.innerHTML = "DIGITAL DESIGNS";
+                        reset_dots();
+                        dot_list[2].classList.add("fas");
                         break;
                     case "resume":
-                            typing_text.innerHTML = "RESUME";
+                        typing_text.innerHTML = "RESUME";
+                        reset_dots();
+                        dot_list[3].classList.add("fas");
                             break;
                     default:
                         break;
