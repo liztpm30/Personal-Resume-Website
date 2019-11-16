@@ -48,7 +48,7 @@ $.fn.isInViewport = function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
   
-$(window).on('resize scroll', function() {
+$(window).on('resize scroll load', function() {
 
 
     $(".sub_section").each(function() {
