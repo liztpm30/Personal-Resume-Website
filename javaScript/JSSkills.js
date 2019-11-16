@@ -50,8 +50,6 @@ $.fn.isInViewport = function() {
   
 $(window).on('resize scroll', function() {
 
-    navBar.classList.add("scroll");
-    left_div.classList.add("scroll");
 
     $(".sub_section").each(function() {
         var activeSection = $(this).attr('id');

@@ -12,8 +12,8 @@
     
 </head>
 <body>
-    <div class="row">
-        <div class="col justify-content-start skill_left p-0">
+    <div class="row" id="skills_body">
+        <div class="col-md-6 justify-content-start skill_left p-0 d-none d-md-inline">
             <div class="row p-0 m-0 pb-5 mb-5">
                 <h1 id="name_alt" class="mb-0 mt-4 pb-4 ml-5 pt-2">LIZ <span>PIEDRA</span></h1>
             </div>
@@ -29,9 +29,9 @@
                 </div>
             </div>
         </div>
-        <div class="col skill_right p-0">
+        <div class="col-md-6 skill_right p-0">
             <section id="mainNavBar">
-                <nav id="bar" class="navbar navbar-expand-md navbar-light pb-4">
+                <nav id="bar" class="navbar navbar-expand-lg navbar-light pb-4">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -63,16 +63,19 @@
             </section>
 
                         
-            <section id="skills" class="sub_section container" >
-                <div id="skill_list" class="section_list container pt-5 pl-5 ml-5 mt-5">
+            <section id="skills" class="sub_section container ml-md-2 ml-5" >
+                <div id="skill_list" class="section_list container pt-5 mt-5">
+                    <div class="row d-sm-none">
+                        <h3>SKILLS</h3>
+                    </div>
                     <div class="row mt-5">
-                        <p> <span> Programming Languages:</span> Java, C++, SQL, HTML5, CSS, JavaScript</p>
+                        <p> <span>Programming Languages:</span> Java, C++, SQL, HTML5, CSS, JavaScript, JQuery</p>
                     </div>
                     <div class="row">
                         <p> <span>Tools:</span> Eclipse, NetBeans, MS Visual Studio</p>
                     </div>
                     <div class="row">
-                        <p> <span>Database systems:</span> MySQL, PostgreSQL</p>
+                        <p> <span>Database systems:</span> MySQL, PostgreSQL, MongoDB</p>
                     </div>
                     <div class="row">
                         <p> <span>Software:</span> Microsoft Oﬃce, Adobe Photoshop, Adobe Illustrator</p>
@@ -83,12 +86,18 @@
                     <div class="row">
                         <p> <span>Languages: </span> English, Spanish</p>
                     </div>
+                    <div class="row">
+                            <p> <span>Frameworks: </span> NodeJS, Express, Spring Boot, Bootstrap</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="experience" class="sub_section mt-5 pt-5 mb-5 pb-5">
-                    <div id="exp_list" class="section_list container pl-5 ml-5">
+            <section id="experience" class="sub_section ml-md-2 mt-5 pt-5 mb-5 pb-5 ml-5">
+                    <div id="exp_list" class="section_list container">
                         <div class="container mt-5 pt-5">
+                            <div class="row d-sm-none">
+                                <h3>EXPERIENCE</h3>
+                            </div>
                             <div class="row mt-5">
                                 <p class="m-0"><span>Support Analyst</span></p>
                             </div>
@@ -96,7 +105,7 @@
                                 <p class="m-0 bold border-bottom">Ryder Logistics</p>
                             </div>
                             <div class="row">
-                                <p class="mt-1 date">11/2017 – Present</p>
+                                <p class="mt-1 date">11/2017 to Present</p>
                             </div>
                         </div>
                         <div class="container">
@@ -107,7 +116,7 @@
                                 <p class="m-0 bold border-bottom">SIXT Rent a Car</p>
                             </div>
                             <div class="row">
-                                <p class="mt-1 date">11/2016 – 11/2017</p>
+                                <p class="mt-1 date">11/2016 to 11/2017</p>
                             </div>
                         </div>
                         <div class="container">
@@ -118,7 +127,7 @@
                                 <p class="m-0 bold border-bottom">Student Life Department - Miami Dade College</p>
                             </div>
                             <div class="row">
-                                <p class="mt-1 date">02/2015 – 11/2016</p>
+                                <p class="mt-1 date">02/2015 to 11/2016</p>
                             </div>
                         </div>
                     </div>
@@ -126,35 +135,38 @@
 
                 <section id="designs" class="sub_section mt-5 pt-5 pb-4">
                         <div id="design_list" class="container mt-5 pt-5">
+                            <div class="row justify-content-center mb-5 d-sm-none">
+                                <h3>DESIGNS</h3>
+                            </div>
                             <div class="row mb-3 justify-content-center">
-                                <div class="card mr-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mx-md-2 col-sm-6 col-12 p-0" style="max-width: 15rem;">
                                     <img src="img/design1.jpg" class="card-img" alt="...">
                                 </div>
-                                <div class="card ml-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mx-md-2 mt-md-2 mt-2 ml-3 ml-md-0 col-sm-6 col-12 p-0" style="max-width: 15rem;">
                                     <img src="img/design2.jpg" class="card-img" alt="...">
                                 </div>
                             </div>
                             <div class="row mb-3 justify-content-center">
-                                <div class="card mr-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mx-md-2 mr-3 col-6 p-0" style="max-width: 15rem;">
                                     <img src="img/design3.jpg" class="card-img" alt="...">
                                 </div>
-                                <div class="card ml-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mt-md-2 mx-md-2 ml-3 col-6 p-0" style="max-width: 15rem;">
                                     <img src="img/design4.jpg" class="card-img" alt="...">
                                 </div>
                             </div>
                             <div class="row mb-3 justify-content-center">
-                                <div class="card mr-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mx-md-2 mr-3 col-6 p-0" style="max-width: 15rem;">
                                     <img src="img/design5.jpg" class="card-img" alt="...">
                                 </div>
-                                <div class="card ml-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mt-md-2 mx-md-2 ml-3 col-6 p-0" style="max-width: 15rem;">
                                     <img src="img/design6.jpg" class="card-img" alt="...">
                                 </div>
                             </div>
                             <div class="row mb-3 justify-content-center">
-                                <div class="card mr-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mx-md-2 mr-3 col-6 p-0" style="max-width: 15rem;">
                                     <img src="img/design7.jpg" class="card-img" alt="...">
                                 </div>
-                                <div class="card ml-3 col-6 p-0" style="max-width: 15rem;">
+                                <div class="card mt-md-2 mx-md-2 ml-3 col-6 p-0" style="max-width: 15rem;">
                                     <img src="img/design8.jpg" class="card-img" alt="...">
                                 </div>
                             </div>

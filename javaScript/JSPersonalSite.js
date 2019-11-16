@@ -41,39 +41,47 @@ for(var i=0; i<icons.length; i++){
     //Missing when Click!!!!!!!!!!!!!!!!!
 }
 
-//Adding events for the contact section
-typing_text_sec.addEventListener("click", function(){
-    typing_text_sec.innerHTML = "Email: lpied013@fiu.edu";
-});
-
 //Typing text animation
 
-    var string1 = typing_text_first.innerHTML
-    var orig_text1 = string1.split("");
+var string1 = typing_text_first.innerHTML
+var orig_text1 = string1.split("");
 
-    var string2 = typing_text_sec.innerHTML
-    var orig_text2 = string2.split("");  
-    
-    var next = false;
+var string2 = typing_text_sec.innerHTML
+var orig_text2 = string2.split("");  
 
-    typing_text_first.innerHTML = "";//clear text on HTML
-    typing_text_sec.innerHTML = "";
+var next = false;
 
-    (function animate1() {
-        if(orig_text1.length > 0){
-            typing_text_first.innerHTML += orig_text1.shift()
-        }else{
-            clearTimeout(running);
-            animate2(); //calling next animation
-        } 
-        var running = setTimeout(animate1, 50);
-    })();
+typing_text_first.innerHTML = "";//clear text on HTML
+typing_text_sec.innerHTML = "";
 
-    function animate2() {
-        if(orig_text2.length > 0){
-            typing_text_sec.innerHTML += orig_text2.shift()
-        }else{
-            clearTimeout(running); 
-        }
-        var running = setTimeout(animate2, 200);
+function animate1() {
+    if(orig_text1.length > 0){
+        typing_text_first.innerHTML += orig_text1.shift()
+    }else{
+        clearTimeout(running);
+        animate2(); //calling next animation
+    } 
+    var running = setTimeout(animate1, 50);
+};
+
+animate1();
+
+function animate2() {
+    if(orig_text2.length > 0){
+        typing_text_sec.innerHTML += orig_text2.shift()
+    }else{
+        clearTimeout(running); 
     }
+    var running = setTimeout(animate2, 200);
+}
+
+//Adding events for the contact section
+typing_text_sec.addEventListener("click", function(){
+    string2 = "Email: lpied013@fiu.edu";
+    orig_text2 = string2.split("");
+    this.innerHTML = "";//clear text on HTML
+    animate2();
+});
+
+
+

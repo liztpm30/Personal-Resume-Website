@@ -8,7 +8,7 @@ body{
 
 p{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
+    font-size: 0.7rem;
 }
 
 .active{
@@ -58,7 +58,7 @@ h1{
 
 #main_image{
     width: 100%;
-    height: 14rem;
+    height: 16rem;
     background:url("img/main_image.png") no-repeat center top;
     background-size: 100%;
 }
@@ -69,7 +69,6 @@ h1{
     font-family: 'Nanum Gothic Coding', monospace;
     color: white;
     margin: 0;
-    font-size: 65%;
     margin-top: 2rem;
 }
 
@@ -99,12 +98,11 @@ h1{
 #main_text #getInTouch{
     text-align: start;
     margin-top: 0;
-    font-size: 1rem;
 
 }
 
 #first_text{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .hide{
@@ -126,7 +124,7 @@ h1{
 }
 
 .section_list p{
- font-size: 1rem;
+ font-size: 0.8rem;
 }
 
 .section_list span{
@@ -151,9 +149,18 @@ h1{
 .skill_left{
     background-color: rgb(20, 21, 23);
     height: 100vh;
+    position:sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .scroll{
+    position:sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#mainNavBar{
     position:sticky;
     top: 0;
     z-index: 100;
@@ -167,7 +174,7 @@ h1{
     color: #f92672;
 }
 
-.skill_right .scroll{
+.skill_right #mainNavBar{
     background-color:  rgb(230, 231, 235);
 } 
 
@@ -185,11 +192,11 @@ h1{
 }
 
 #skills{
-    height: 45rem;
+    height: 50rem;
 }
 
 #experience{
-    height: 45rem;
+    height: 55rem;
 }
 
 #resume{
@@ -206,11 +213,26 @@ h1{
     color:  rgb(20, 21, 23);
 }
 
+#copyright {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.sub_section{
+    font-size: 1rem;
+}
+
+#skills_body{
+    background-color: rgb(20, 21, 23);
+    color: rgb(230, 231, 235);
+}
+
 /* Adjusting elements according to screen size. Responsive */
 
-@media screen and (min-width: 576px) {   /*Small*/
+@media (min-width: 576px) {   /*Small*/
     #main_text p{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-top: 3rem;
     }
 
@@ -222,11 +244,15 @@ h1{
         margin-top: 0.5rem;
     }
 
+    .section_list p {
+        font-size: 0.9rem;
+    }
+
 }
 
-@media screen and (min-width: 768px) {   /*Medium*/
+@media (min-width: 768px) {   /*Medium*/
     #main_text p{
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 3rem;
     }
 
@@ -235,25 +261,40 @@ h1{
         margin-top: 0rem;
     }
 
-  
+    #skills_body{
+        background: rgb(230, 231, 235);
+        color: rgb(20, 21, 23);
+    }
+
+    .section_list p {
+        font-size: 0.7rem;
+    }
 
 }
 
-@media screen and (min-width: 992px) {  /*Large*/
+@media (min-width: 992px) {  /*Large*/
 
     #main_text p{
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 3rem;
     }
 
     #main_image{
         height: 25rem;
     }
+
+    .section_list p {
+        font-size: 0.9rem;
+    }
 }
 
-@media screen and (min-width: 1200px) {   /*Extra Large*/
+@media (min-width: 1200px) {   /*Extra Large*/
     #main_text p{
-        font-size: 1.1rem;
+        font-size: 1rem;
         margin-top: 3rem;
+    }
+
+    .section_list p {
+        font-size: 1rem;
     }
 }
